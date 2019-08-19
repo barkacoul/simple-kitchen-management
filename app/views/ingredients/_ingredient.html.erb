@@ -1,0 +1,57 @@
+                
+            <br/><br/>
+                
+                <div class="col-lg-12 col-md-12 col-lg-12">
+                    <div class="panel">
+    <div class="panel-heading">
+        <strong>List of Ingredients</strong>
+    </div>
+    <div class="panel-body">
+        <div class="form-horizontal">
+           
+            <div class="row">
+                <div class="col-lg-s12">
+                    <div>
+                        
+                        <% if ingredients.blank?  then %>
+                        
+                        <p>There are no stocked ingredients</p>
+                            
+                        <% else 
+                        ingredients.each{|i|
+                            %>
+                        
+                        <table class="table">
+                            
+                            <thead>
+                                <tr>
+                            <td>Name</td>
+                            <td>Unit</td>
+                            <td>Unit Cost</td>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                            <tr>
+                                <td><%= i.ingredient_name %> </td>
+                                <td><%= i.unit %></td>
+                                <td><%= i.unit_cost %></td>
+                                
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                        <% }
+                        end %>
+                        
+                        </div>
+                    </div>
+                
+            </div>
+                    
+                    
+
+            </div>
+          </div>
+        </div>
+    </div>

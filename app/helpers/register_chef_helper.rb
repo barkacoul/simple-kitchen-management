@@ -1,0 +1,2 @@
+module RegisterChefHelper
+end

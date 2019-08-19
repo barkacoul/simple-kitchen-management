@@ -1,0 +1,13 @@
+<div class="form-inline">
+
+    <div class="clearfix">
+    
+    <div class="nested-fields">
+        <div style="padding: 5px"></div>
+        <%= f.collection_select(:ingredient_id, Ingredient.all, :id, :ingredient_name, {class: "form-input form-control"} ) %>
+        <%= f.number_field :quantity %>
+        <%= link_to_remove_association "X", f, {}, {class: "form-button btn btn-default"} %>
+        </div>
+    </div>
+        </div>
+    
